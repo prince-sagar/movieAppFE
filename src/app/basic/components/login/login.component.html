@@ -1,1 +1,31 @@
-<p>login works!</p>
+<div class="bg">
+  <div class="parent">
+    <div class="child">
+      <div class="nz-col">
+        <h1 style="margin-left: 55px;">Login</h1>
+      </div>
+
+      <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+
+        <nz-form-item>
+          <nz-form-control nzHasFeedback nzErrorTip="The input is not valid E-mail">
+            <input nz-input placeholder="Email" formControlName="userName" id="email" />
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-control nzHasFeedback nzErrorTip="Please input your password!">
+            <input nz-input type="password" placeholder="Password" formControlName="password" id="password" />
+          </nz-form-control>
+        </nz-form-item>
+
+        <button nz-button class="login-form-button login-form-margin"  [nzType]="'primary'">
+          Login
+        </button>
+        Or
+        <a routerLink="/register" class="login-form-button login-form-margin">Login</a>
+
+      </form>
+    </div>
+  </div>
+</div>
